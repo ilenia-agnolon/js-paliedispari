@@ -11,9 +11,10 @@ ________________________________________________________________________________
 
 //INPUT
 // Chiedi all’utente se sceglie pari o dispari
+const scegliPariDispari = prompt("Scegli pari o dispari?");
 
 //Chiedi all’utente di inserire un numero da 1 a 5
-
+const numeroUtente = parseInt(prompt("Scegli pari o dispari?"));
 
 
 
