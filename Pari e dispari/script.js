@@ -21,8 +21,12 @@ const numeroUtente = parseInt(prompt("Scegli pari o dispari?"));
 //ELABORAZIONE
 //1. generare numero per il computer
     //usare funzione che genera numero casuale tra 1 e 5
+    function randomNum() {
+        return Math.floor(Math.random() * 5) + 1;
+    }
 
     // salvare il risultato in una variabile
+    const numeroComputer = randomNum();
 
 
 //2. somma dei numeri (Somma il numero dell’utente e quello del computer)
