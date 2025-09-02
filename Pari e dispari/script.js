@@ -11,10 +11,10 @@ ________________________________________________________________________________
 
 //INPUT
 // Chiedi all’utente se sceglie pari o dispari
-const scegliPariDispari = prompt("Scegli pari o dispari?");
+const sceltaUtente = prompt("Scegli pari o dispari?");
 
 //Chiedi all’utente di inserire un numero da 1 a 5
-const numeroUtente = parseInt(prompt("Scegli pari o dispari?"));
+const numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5"));
 
 
 
@@ -30,18 +30,31 @@ const numeroUtente = parseInt(prompt("Scegli pari o dispari?"));
 
 
 //2. somma dei numeri (Somma il numero dell’utente e quello del computer)
+    const somma = numeroUtente + numeroComputer;
 
 
 //3. funzione per dire se è pari o dispari
     //crea una funzione che prende un numero e restituisce "pari" se % 2 === 0, altrimenti "dispari"
+    function checkPariDispari(numero) {
+        if (numero % 2 === 0) {
+            return "pari";
+        } else {
+            return "dispari";
+        }
+    }
 
     //applica la funzione alla somma
+    const risultatoPariDispari = checkPariDispari(somma);
 
 //4. stabilire chi vince
     //se il risultato è quello che ha scelto l'utente, allora vince lui
+    if (risultatoPariDispari === sceltaUtente) {
+        console.log("Hai vinto tu!");
+        //altrimenti, vince il computer       
+    } else {
+        console.log("Ha vinto il computer.");        
+    }
 
-    //altrimenti, vince il computer
-
-
+    
 
 //OUTPUT: stampare num utente e num computer, somma e chi ha vinto
